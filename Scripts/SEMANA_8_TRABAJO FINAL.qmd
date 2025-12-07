@@ -1,0 +1,33 @@
+---
+title: "SEMANA 8 qmd"
+author: "VALERIA_LAURA_ANGULO"
+format: html
+editor: visual
+---
+
+## Quarto
+
+Quarto enables you to weave together content and executable code into a finished document. To learn more about Quarto see <https://quarto.org>.
+
+## Running Code
+
+When you click the **Render** button a document will be generated that includes both content and the output of embedded code. You can embed code like this:
+
+```{r}
+#INSTALAR EL PAQUETE QUE USAREMOS EN EL SIGUIENTE COMANDO
+install.packages("generics")
+library(generics)
+```
+
+You can add options to executable code like this
+
+```{r}
+#CREAR DATOS GENERADOS
+set.seed(124)
+mis_datos  <-rnorm(100,mean = 80, sd = 18)
+hist(mis_datos,main = "Histograma de datos generados",
+     xlab = "valores",
+     col = "skyblue",
+     border = "red")
+
+```
