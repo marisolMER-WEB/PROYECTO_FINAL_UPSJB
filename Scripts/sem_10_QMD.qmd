@@ -1,0 +1,33 @@
+---
+title: "SEMANA_10"
+author: "SISTEMATIZACION Y METODOS ESTADISTICOS"
+format: html
+editor: visual
+---
+
+## CARPETA SEMANA 10
+
+Calcular las medidas de tedencia central (media aritmética, mediana y moda)
+
+```{r}
+#IMPORTAR ARCHIVO
+
+data<- read_csv("C:/Users/Lenovo/Downloads/s02_treat_artritis.csv")
+```
+
+MEDIDAS DE TENDENCIA CENTRAL:
+
+```{r}
+#MEDIA ARITMÉTICA
+mean(data$Edad)
+```
+
+```{r}
+#MEDIANA
+median(data$Edad)
+```
+
+```{r}
+#MODA
+mode_Edad<-names(sort(table(data$Edad),decreasing = TRUE))
+```
