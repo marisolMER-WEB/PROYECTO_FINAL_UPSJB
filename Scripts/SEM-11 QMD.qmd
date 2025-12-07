@@ -1,0 +1,48 @@
+---
+title: "SEM-11"
+author: "SISTEMATIZACION"
+format: html
+editor: visual
+---
+
+## Quarto
+
+Quarto enables you to weave together content and executable code into a finished document. To learn more about Quarto see <https://quarto.org>.
+
+## Running Code
+
+When you click the **Render** button a document will be generated that includes both content and the output of embedded code. You can embed code like this:
+
+```{r}
+#CASO: Tiempo de hospitalización vs. Edad del paciente
+
+# Datos
+edad <- c(25,30,35,40,45,50,55,60,65,70,75,80)
+dias <- c(2,3,4,4,5,6,7,7,8,9,9,10)
+```
+
+You can add options to executable code like this
+
+```{r}
+# Crear dataframe
+datos <- data.frame(edad, dias)
+```
+
+```{r}
+# Regresión lineal
+modelo <- lm(dias ~ edad, data = datos)
+```
+
+```{r}
+# Resumen del modelo
+summary(modelo)
+```
+
+```{r}
+# Gráfico
+plot(edad, dias,
+     main = "Relación entre edad y días hospitalizado",
+     xlab = "Edad del paciente",
+     ylab = "Días hospitalizado")
+abline(modelo, col="blue", lwd=2) 
+```
