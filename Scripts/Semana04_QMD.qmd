@@ -1,0 +1,22 @@
+---
+title: "SEMANA 04"
+author: "SISTEMATIZACIÓN_Y_METODOS ESTADÍSTICOS"
+format: html
+editor: visual
+---
+
+## Carpeta Semana 04: 
+
+Como descargar un archivo en formato CSV del repositorio GITHUB
+
+#Me ubico en la guía práctica
+
+#Me dirijo a la dirección del GITHUB
+
+#Me dirijo a REPOSITORIO y selecciono DATA #Descargo la data CSV
+
+#Verifíco en mis archivos descargados
+
+```{r}
+
+```
