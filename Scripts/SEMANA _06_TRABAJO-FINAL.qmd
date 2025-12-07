@@ -1,0 +1,26 @@
+---
+title: "SEMANA_06_TRABAJO-FINAL"
+author: "SISTEMATIZACION"
+format: html
+editor: visual
+---
+
+## Quarto
+
+Quarto enables you to weave together content and executable code into a finished document. To learn more about Quarto see <https://quarto.org>.
+
+**COMO LIMPIAR UNA DATA PARA UTILIZAR UNA COLUMNA ESPECIFICA**
+
+**#CARGAMOS DATA**
+
+```{r}
+#CARGAR DATA NUEVA
+data<- read_csv("C:/Users/Usuario/Downloads/s02_treat_artritis.csv")
+```
+
+**#LIMPIAMOS**
+
+```{r}
+#LIMPIAR DATA DE LA COLUMNA QUE CONTENGA FILAS CON NA
+data_limpia<-data[!is.na(data$CDAI),]
+```
