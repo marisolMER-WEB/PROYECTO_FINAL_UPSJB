@@ -1,0 +1,42 @@
+---
+title: "PROYECTO_SEMANA_14"
+author: "JESSICA PANTA"
+format: html
+editor: visual
+---
+
+```{r}
+#REGRESIÓN LINEAL MULTIVARIADA
+#Colesterol (Y) vs IMC, Edad, Consumo de grasas
+#Generar y cargar el dataset
+set.seed(123)
+n <- 50
+```
+
+```{r}
+IMC <- rnorm(n, 27, 4)
+Edad <- sample(20:75, n, replace = TRUE)
+Grasas <- rnorm(n, 80, 20)
+```
+
+```{r}
+Colesterol <- 120 + 1.8*IMC + 0.5*Edad + 0.9*Grasas + rnorm(n, 0, 20)
+```
+
+```{r}
+datos2 <- data.frame(Colesterol, IMC, Edad, Grasas)
+head(datos2)
+```
+
+```{r}
+#Ajustar el modelo múltiple
+modelo2 <- lm(Colesterol ~ IMC + Edad + Grasas, data = datos2)
+summary(modelo2)
+```
+
+```{r}
+#Diagnóstico de supuestos
+par(mfrow=c(2,2))
+plot(modelo2)
+par(mfrow=c(1,1))
+```
